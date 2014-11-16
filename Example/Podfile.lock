@@ -1,0 +1,14 @@
+PODS:
+  - JTSlideShadowAnimation (1.0.0)
+
+DEPENDENCIES:
+  - JTSlideShadowAnimation (from `../`)
+
+EXTERNAL SOURCES:
+  JTSlideShadowAnimation:
+    :path: ../
+
+SPEC CHECKSUMS:
+  JTSlideShadowAnimation: 7298f7d36187e4839df40852ef83a3d9b03e9e71
+
+COCOAPODS: 0.34.4
