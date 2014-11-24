@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JTSlideShadowAnimation"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "A shadow animation effect for iOS."
   s.homepage     = "https://github.com/jonathantribouharet/JTSlideShadowAnimation"
   s.license      = { :type => 'MIT' }

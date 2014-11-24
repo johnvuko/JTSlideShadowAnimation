@@ -7,6 +7,12 @@
 
 #import "JTSlideShadowAnimation.h"
 
+@interface JTSlideShadowAnimation(){
+    CABasicAnimation *currentAnimation;
+}
+
+@end
+
 @implementation JTSlideShadowAnimation
 
 - (id)init
@@ -28,7 +34,7 @@
     
     self.shadowWidth = 20.;
     self.repeatCount = HUGE_VALF;
-    self.duration = 2.;
+    self.duration = 3.;
 }
 
 - (void)start
@@ -68,14 +74,14 @@
     
     self.animatedView.layer.mask = gradientMask;
     
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"locations"];
-    animation.fromValue = startLocations;
-    animation.toValue = endLocations;
-    animation.repeatCount = self.repeatCount;
-    animation.duration  = self.duration;
-    animation.delegate = self;
+    currentAnimation = [CABasicAnimation animationWithKeyPath:@"locations"];
+    currentAnimation.fromValue = startLocations;
+    currentAnimation.toValue = endLocations;
+    currentAnimation.repeatCount = self.repeatCount;
+    currentAnimation.duration  = self.duration;
+    currentAnimation.delegate = self;
     
-    [gradientMask addAnimation:animation forKey:@"JTSlideShadowAnimation"];
+    [gradientMask addAnimation:currentAnimation forKey:@"JTSlideShadowAnimation"];
 }
 
 - (void)stop
@@ -83,12 +89,15 @@
     if(self.animatedView && self.animatedView.layer.mask){
         [self.animatedView.layer.mask removeAnimationForKey:@"JTSlideShadowAnimation"];
         self.animatedView.layer.mask = nil;
+        currentAnimation = nil;
     }
 }
 
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)finished
 {
-    [self stop];
+    if(anim == currentAnimation){
+        [self stop];
+    }
 }
 
 @end
