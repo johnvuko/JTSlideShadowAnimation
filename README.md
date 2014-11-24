@@ -90,6 +90,10 @@ Example:
 - iOS 7 or higher
 - Automatic Reference Counting (ARC)
 
+## Known Issues
+
+- Animation stop when the application go in background, you have to restart it manually
+
 ## Author
 
 - [Jonathan Tribouharet](https://github.com/jonathantribouharet) ([@johntribouharet](https://twitter.com/johntribouharet))
