@@ -13,7 +13,6 @@ With [CocoaPods](http://cocoapods.org/), add this line to your Podfile.
 
 	pod 'JTSlideShadowAnimation', '~> 1.0'
 
-
 ## Screenshots
 
 ![Example](./Screens/example.gif "Example View")
@@ -36,7 +35,7 @@ Just import `JTSlideShadowAnimation.h`.
 @end
 ```
 
-Assign the view you want to animate and start the animate.
+Assign the view you want to animate and start the animation.
 
 ```objective-c
 - (void)viewDidLoad
