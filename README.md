@@ -1,6 +1,6 @@
-JTSlideShadowAnimation
-======================
+# JTSlideShadowAnimation
 
+[![CI Status](http://img.shields.io/travis/jonathantribouharet/JTSlideShadowAnimation.svg)](https://travis-ci.org/jonathantribouharet/JTSlideShadowAnimation)
 ![Version](https://img.shields.io/cocoapods/v/JTSlideShadowAnimation.svg)
 ![License](https://img.shields.io/cocoapods/l/JTSlideShadowAnimation.svg)
 ![Platform](https://img.shields.io/cocoapods/p/JTSlideShadowAnimation.svg)
